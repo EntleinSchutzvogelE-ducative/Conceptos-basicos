@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Emparejamiento: estructura de la materia</title>
+<style>
+  body{
+    font-family: Arial, sans-serif;
+    background:#f4f6fb;
+    margin:0;
+    padding:30px;
+    color:#222;
+  }
+
+  h1{
+    text-align:center;
+    margin-bottom:10px;
+  }
+
+  p.instruccion{
+    text-align:center;
+    margin-bottom:30px;
+  }
+
+  .contenedor{
+    display:grid;
+    grid-template-columns: 320px 260px 260px;
+    gap:24px;
+    justify-content:center;
+    align-items:start;
+  }
+
+  .columna{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .card{
+    background:white;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.12);
+    padding:14px;
+  }
+
+  .concepto{
+    font-weight:bold;
+    margin-bottom:8px;
+  }
+
+  select{
+    width:100%;
+    padding:8px;
+    font-size:15px;
+    border-radius:6px;
+    border:1px solid #bbb;
+  }
+
+  .imagen-titulo{
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:8px;
+  }
+
+  .image-box{
+    width:210px;
+    height:150px;
+    margin:auto;
+    border:2px dashed #b8bfd1;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fafbfe;
+    color:#6b7280;
+    overflow:hidden;
+  }
+
+  .image-box img{
+    max-width:100%;
+    max-height:100%;
+    display:block;
+  }
+
+  .acciones{
+    text-align:center;
+    margin-top:28px;
+  }
+
+  button{
+    padding:10px 20px;
+    font-size:16px;
+    border:none;
+    border-radius:8px;
+    background:#0b63ce;
+    color:white;
+    cursor:pointer;
+  }
+
+  button:hover{
+    background:#094fa4;
+  }
+
+  #resultado{
+    margin-top:16px;
+    font-size:18px;
+    text-align:center;
+    font-weight:bold;
+  }
+</style>
+</head>
+<body>
+
+<h1>Emparejamiento de conceptos</h1>
+<p class="instruccion">Relaciona cada concepto con la imagen que le corresponde.</p>
+
+<div class="contenedor">
+
+  <!-- ========================= -->
+  <!-- COLUMNA 1: CONCEPTOS      -->
+  <!-- ========================= -->
+  <div class="columna">
+
+    <div class="card">
+      <div class="concepto">Átomo</div>
+      <select id="q1">
+        <option value="">Seleccionar imagen</option>
+        <option value="A">Imagen A</option>
+        <option value="B">Imagen B</option>
+        <option value="C">Imagen C</option>
+        <option value="D">Imagen D</option>
+        <option value="E">Imagen E</option>
+        <option value="F">Imagen F</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <div class="concepto">Molécula</div>
+      <select id="q2">
+        <option value="">Seleccionar imagen</option>
+        <option value="A">Imagen A</option>
+        <option value="B">Imagen B</option>
+        <option value="C">Imagen C</option>
+        <option value="D">Imagen D</option>
+        <option value="E">Imagen E</option>
+        <option value="F">Imagen F</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <div class="concepto">Elemento</div>
+      <select id="q3">
+        <option value="">Seleccionar imagen</option>
+        <option value="A">Imagen A</option>
+        <option value="B">Imagen B</option>
+        <option value="C">Imagen C</option>
+        <option value="D">Imagen D</option>
+        <option value="E">Imagen E</option>
+        <option value="F">Imagen F</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <div class="concepto">Compuesto</div>
+      <select id="q4">
+        <option value="">Seleccionar imagen</option>
+        <option value="A">Imagen A</option>
+        <option value="B">Imagen B</option>
+        <option value="C">Imagen C</option>
+        <option value="D">Imagen D</option>
+        <option value="E">Imagen E</option>
+        <option value="F">Imagen F</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <div class="concepto">Mezcla heterogénea</div>
+      <select id="q5">
+        <option value="">Seleccionar imagen</option>
+        <option value="A">Imagen A</option>
+        <option value="B">Imagen B</option>
+        <option value="C">Imagen C</option>
+        <option value="D">Imagen D</option>
+        <option value="E">Imagen E</option>
+        <option value="F">Imagen F</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <div class="concepto">Mezcla homogénea</div>
+      <select id="q6">
+        <option value="">Seleccionar imagen</option>
+        <option value="A">Imagen A</option>
+        <option value="B">Imagen B</option>
+        <option value="C">Imagen C</option>
+        <option value="D">Imagen D</option>
+        <option value="E">Imagen E</option>
+        <option value="F">Imagen F</option>
+      </select>
+    </div>
+
+  </div>
+
+  <!-- ========================= -->
+  <!-- COLUMNA 2: A, B, C        -->
+  <!-- ========================= -->
+  <div class="columna">
+
+    <div class="card">
+      <div class="imagen-titulo">Imagen A</div>
+      <div class="image-box">
+        <!-- Imagen A, elemento -->
+        <img src="Elemento.png"   alt="Imagen A">
+      
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="imagen-titulo">Imagen B</div>
+      <div class="image-box">
+        <!-- Imagen B, mezcla heterogénea -->
+        <img src="Heterogenea.png" alt="Imagen B">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="imagen-titulo">Imagen C</div>
+      <div class="image-box">
+        <!-- Imagen C, Molecula -->
+        <img src="Molecula.png" alt="Imagen C"> 
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ========================= -->
+  <!-- COLUMNA 3: D, E, F        -->
+  <!-- ========================= -->
+  <div class="columna">
+
+    <div class="card">
+      <div class="imagen-titulo">Imagen D</div>
+      <div class="image-box">
+        <!-- Imagen D, compuesto -->
+        <img src="Compuesto.png" alt="Imagen D"> 
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="imagen-titulo">Imagen E</div>
+      <div class="image-box">
+        <!-- Imagen E, mezcla heterogénea -->
+       <img src="Homogenea.png" alt="Imagen E"> 
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="imagen-titulo">Imagen F</div>
+      <div class="image-box">
+      <img src="Atomo.png" alt="Imagen F"> 
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="acciones">
+  <button onclick="verificar()">Verificar respuestas</button>
+</div>
+
+<div id="resultado"></div>
+
+<script>
+function verificar(){
+  const correctas = {
+    q1: "F", // Átomo
+    q2: "C", // Molécula
+    q3: "A", // Elemento
+    q4: "D", // Compuesto
+    q5: "B", // Mezcla heterogénea
+    q6: "E"  // Mezcla homogénea
+  };
+
+  let puntaje = 0;
+
+  for (let key in correctas){
+    const seleccion = document.getElementById(key).value;
+    if(seleccion === correctas[key]){
+      puntaje++;
+    }
+  }
+
+  document.getElementById("resultado").innerHTML =
+    "Respuestas correctas: " + puntaje + " de 6";
+}
+</script>
+
+</body>
+</html>
